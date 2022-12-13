@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Website</title>
+  </head>
+  <body>
+    <h1>Hello!</h1>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+<script>
+  // Listen for AJAX requests to the current URL
+  $(document).ajaxComplete((event, xhr, settings) => {
+    // Check if the request method is POST
+    if (settings.type === 'POST') {
+      // Send a response message
+      xhr.responseText = 'hey';
+    }
+  });
+</script>
+</html>
